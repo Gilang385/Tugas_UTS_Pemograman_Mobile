@@ -1,1 +1,44 @@
+package com.example.resepmama;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Inisialisasi setiap ImageView berdasarkan ID
+        ImageView imageRendang = findViewById(R.id.image_rendang);
+        ImageView imageAyamBakar = findViewById(R.id.image_ayam_bakar);
+        ImageView imageSeblak = findViewById(R.id.image_seblak);
+        ImageView imageSopIga = findViewById(R.id.image_sop_iga);
+
+
+        // Set OnClickListener untuk setiap ImageView
+        imageRendang.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Rendang clicked", Toast.LENGTH_SHORT).show();
+            // Tambahkan kode untuk berpindah ke Activity atau Fragment lain jika diperlukan
+        });
+
+        imageAyamBakar.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Ayam Bakar clicked", Toast.LENGTH_SHORT).show();
+        });
+
+        imageSeblak.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Seblak clicked", Toast.LENGTH_SHORT).show();
+        });
+
+        imageSopIga.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Sop Iga clicked", Toast.LENGTH_SHORT).show();
+        });
+
+    }
+}
 
